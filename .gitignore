@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# 本流程的中间产物（见 cleanup.py）
+_src_*/
+_rgb_*/
+_alp_*/
+_layout_tmp/
+_var_tmp/
+_probe_tmp/
+_probe_tmp*
+chk/
+frames_*/
+
+# 输出与素材
+out/
+*.mp4
+*.webm
+*.mov
+*.mkv
+!docs/*.mp4
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
