@@ -32,6 +32,37 @@ pip install pillow numpy
 ffmpeg -version   # 确认可用
 ```
 
+## 安装
+
+这个 skill 靠 agent 的 skill 目录约定被识别，克隆到那里：
+
+```bash
+git clone https://github.com/leayuanxiu/video-logo-wordmark.git \
+  ~/.agents/skills/video-logo-wordmark
+```
+
+Windows（PowerShell）：
+
+```powershell
+git clone https://github.com/leayuanxiu/video-logo-wordmark.git `
+  "$env:USERPROFILE\.agents\skills\video-logo-wordmark"
+```
+
+不用装成 Python 包，脚本按路径直接跑：
+
+```bash
+python ~/.agents/skills/video-logo-wordmark/scripts/scan_segments.py --help
+```
+
+只想临时用的话，clone 到任何目录都行，把命令里的路径换掉即可——但 agent 要自动发现这个 skill，就必须在 `~/.agents/skills/` 下。
+
+**国内网络注意**：如果 `github.com` 直连超时但浏览器能开，说明系统代理只对浏览器生效。git 需要显式指定：
+
+```powershell
+$env:HTTPS_PROXY = "http://127.0.0.1:7897"   # 换成你自己的代理端口
+git clone ...
+```
+
 ## 快速开始
 
 ```bash
